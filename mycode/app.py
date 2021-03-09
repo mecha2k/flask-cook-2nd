@@ -1,6 +1,5 @@
 from flask import Flask
 
-
 app = Flask(__name__)
 app.env = "development"
 
@@ -27,4 +26,5 @@ def add_or_update_message(key, message):
     return "%s Added/Updated" % key
 
 
-app.run(port=5000, debug=True)
+if __name__ == "__main__":
+    app.run(port=5000, debug=True)
